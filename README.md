@@ -143,7 +143,3 @@ pm2 save
 | `EADDRINUSE` | Run `pkill node` then restart |
 
 ---
-
-## Resume Description
-
-> Built a cloud-based file storage application using Node.js (Express) on AWS EC2 and Amazon S3 for object storage. Implemented IAM role-based authentication, pre-signed URLs for secure downloads, and a responsive drag-and-drop UI. Deployed with PM2 for process management.
