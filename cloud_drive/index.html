@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CloudDrive Lite</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ── Header ── -->
+  <header>
+    <div class="logo">
+      <span class="logo-icon">☁</span>
+      <span>CloudDrive <strong>Lite</strong></span>
+    </div>
+    <p class="tagline">Secure file storage · Powered by AWS S3</p>
+  </header>
+
+  <!-- ── Upload Zone ── -->
+  <main>
+    <section class="upload-card" id="dropZone">
+      <div class="drop-icon">📂</div>
+      <p class="drop-label">Drag &amp; drop a file here, or</p>
+      <label class="btn-choose" for="fileInput">Choose File</label>
+      <input type="file" id="fileInput" hidden />
+      <div id="selectedFile" class="selected-name"></div>
+
+      <button class="btn-upload" id="uploadBtn" disabled>Upload to S3</button>
+
+      <!-- Progress bar -->
+      <div class="progress-wrap" id="progressWrap" hidden>
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+      <p class="status-msg" id="statusMsg"></p>
+    </section>
+
+    <!-- ── Search ── -->
+    <div class="search-row">
+      <input type="text" id="searchInput" placeholder="Search files…" />
+      <button class="btn-refresh" id="refreshBtn" title="Refresh list">↻</button>
+    </div>
+
+    <!-- ── File List ── -->
+    <section class="file-list" id="fileList">
+      <p class="empty-msg">No files uploaded yet.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
